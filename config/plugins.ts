@@ -13,4 +13,17 @@ export default ({ env }) => ({
       },
     },
   },
+  email: {
+    config: {
+      provider: "strapi-provider-email-brevo",
+      providerOptions: {
+        apiKey: env("BREVO_API_KEY"),
+      },
+      settings: {
+        defaultSenderEmail: "noreply@digitree.com",
+        defaultSenderName: "Digitree",
+        defaultReplyTo: "hello@digitree.com",
+      },
+    },
+  },
 });
